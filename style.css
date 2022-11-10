@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #512da8;
+    height: 100vh;
+}
+
+.btn {
+    display: block;
+    width: 250px;
+    height: 100px;
+    padding: 10px;
+    background-color: #c2185b;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    position: relative;
+    z-index: 12;
+    overflow: hidden;
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.btn .ripple {
+    position: absolute;
+    z-index: 2;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0;
+    animation: scale 0.4s ease infinite;
+}
+
+
+@keyframes scale {
+    0% {
+        width: 10px;
+        height: 10px;
+        opacity: 1;
+    }
+
+    100% {
+        width: 550px;
+        height: 550px;
+        opacity: .5;
+    }
+}
